@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/***** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ *****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/***** main styles *****/
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: #0f1424;
+  color: white;
+  min-height: 100vh;
+  font-weight: 300;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  grid-auto-rows: 245px;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.profile-container .user-details-container {
+  background-color: #5847eb;
+}
+
+.profile-container .user-details-container .profile-photo {
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.profile-container .time-period-container {
+  background-color: #1c1f4a;
+}
+
+.profile-container .time-period-container .time-periods {
+  gap: 10px;
+}
+
+.profile-container .time-period-container .time-periods .time-period-btn {
+  background-color: transparent;
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  outline: transparent;
+  border: none;
+  width: 80px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dashboard-item-container .photo-container {
+  height: 40px;
+  background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.dashboard-item-container .stats-container {
+  background-color: #1c1f4a;
+}
+
+.dashboard-item-container .stats-container .title-details {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=styles.css.map */

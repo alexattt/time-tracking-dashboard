@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useState } from 'react';
+import Profile from './components/Profile';
+import DashboardItem from './components/DashboardItem';
+import data from './local-json/data.json';
+import './css/styles.scss';
 
-function App() {
+const backgroundImages = ['/icon-work.svg', '/icon-play.svg', '/icon-study.svg', 
+                          '/icon-exercise.svg', '/icon-social.svg', '/icon-self-care.svg'];
+const backgroundColors = ['#ff8c66', '#56c2e6', '#ff5c7c', '#4acf81', '#7536d3', '#f1c65b'];
+
+const App = () => {
+  const [timePeriod, setTimePeriod] = useState('Weekly')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-container'>
+      <div className="card-container">
+        <Profile setTimePeriod={setTimePeriod}/>
+        {data.map((item, value) => {
+          if (timePeriod === "Daily") {
+            return <DashboardItem key={item.title} backgroundImage={backgroundImages[value]} backgroundColor={backgroundColors[value]} 
+                                  statsData={item.timeframes.daily} period={"Day"}/>
+          }
+          if (timePeriod === "Weekly") {
+            return <DashboardItem key={item.title} backgroundImage={backgroundImages[value]} backgroundColor={backgroundColors[value]} 
+                                  statsData={item.timeframes.weekly} period={"Week"}/>
+          }
+          if (timePeriod === "Monthly") {
+            return <DashboardItem key={item.title} backgroundImage={backgroundImages[value]} backgroundColor={backgroundColors[value]} 
+                                  statsData={item.timeframes.monthly} period={"Month"}/>
+          }
+        })}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
