@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/time-tracking-dashboard/static/css/main.3ebb4cfb.css",
+    "main.js": "/time-tracking-dashboard/static/js/main.51e2093a.js",
+    "index.html": "/time-tracking-dashboard/index.html",
+    "main.3ebb4cfb.css.map": "/time-tracking-dashboard/static/css/main.3ebb4cfb.css.map",
+    "main.51e2093a.js.map": "/time-tracking-dashboard/static/js/main.51e2093a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ebb4cfb.css",
+    "static/js/main.51e2093a.js"
+  ]
+}
