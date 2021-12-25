@@ -31,7 +31,7 @@ const Profile = ({setTimePeriod}) => {
     <div className='profile-container flex-column'>
       <div className="user-info-container">   
         <div className="user-details-container flex-column">
-          <img src='/image-jeremy.png' alt="" className='profile-photo'/>
+          <img src='/image-jeremy.png' alt="profile-photo" className='profile-photo'/>
           <div className="name-container">
             <p className="report-for">Report for</p>
             <p className="user-name">Jeremy Robson</p>
