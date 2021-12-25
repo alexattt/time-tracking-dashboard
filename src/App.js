@@ -19,15 +19,15 @@ const App = () => {
         {data.map((item, value) => {
           if (timePeriod === "Daily") {
             return <DashboardItem key={item.title} backgroundImage={backgroundImages[value]} backgroundColor={backgroundColors[value]} 
-                                  statsData={item.timeframes.daily} period={"Day"}/>
+                                  statsData={item.timeframes.daily} period={"Day"} title={item.title}/>
           }
           if (timePeriod === "Weekly") {
             return <DashboardItem key={item.title} backgroundImage={backgroundImages[value]} backgroundColor={backgroundColors[value]} 
-                                  statsData={item.timeframes.weekly} period={"Week"}/>
+                                  statsData={item.timeframes.weekly} period={"Week"} title={item.title}/>
           }
           if (timePeriod === "Monthly") {
             return <DashboardItem key={item.title} backgroundImage={backgroundImages[value]} backgroundColor={backgroundColors[value]} 
-                                  statsData={item.timeframes.monthly} period={"Month"}/>
+                                  statsData={item.timeframes.monthly} period={"Month"} title={item.title}/>
           }
         })}
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashboardItem = ({backgroundImage, backgroundColor, statsData, period}) => {
+const DashboardItem = ({backgroundImage, backgroundColor, statsData, period, title}) => {
 
   return (
     <div className='dashboard-item-container'>
@@ -12,7 +12,7 @@ const DashboardItem = ({backgroundImage, backgroundColor, statsData, period}) =>
       </div>
       <div className="stats-container">
         <div className="title-details flex-row">
-          <p className="title">Work</p>
+          <p className="title">{title}</p>
           <img src="/icon-ellipsis.svg" alt="details-icon" className="details"/>
         </div>
         <div className="data flex-column">
